@@ -41,22 +41,22 @@ versão Dart do períod do curso
 Seção 2:  Conhecendo o Prompt de Comando
 
 --------------------------------------
-8.
+8 Conhecendo o CMD
 CONCLUÍDO: 19/12/2021
 
 --------------------------------------
-9.
+9 Navegando entre pastas
 CONCLUÍDO: 19/12/2021
 
 --------------------------------------
-10.
+10 Executando programas 
 CONCLUÍDO: 19/12/2021
 
 ================
 Seção 3:  Algoritmos Computacionais
 
 --------------------------------------
-11
+11 Instalando uma IDE (VSCode)
 CONCLUÍDO: 19/12/2021
 
 ------------------------------- 
