@@ -395,31 +395,101 @@ CONCLUÍDO: 25/12/2021
 
 --------------------------------------
 59 Refatorando cálculo de IMC e cadastro 
+CONCLUÍDO: 25/12/2021
 
 --------------------------------------
 60 Recapitulando
-
+CONCLUÍDO: 25/12/2021
 
 ================
 Seção 10: Programação Orientada a Objetos
 
 --------------------------------------
 61 O que é ?
+CONCLUÍDO: 25/12/2021
+
+Polimorfismo é o princípio pelo qual duas ou mais classes derivadas de uma mesma superclasse podem invocar métodos que têm a mesma identificação (assinatura) mas comportamentos distintos, especializados para cada classe derivada, usando para tanto uma referência a um objeto do tipo da superclasse.
+Fonte: https://bityli.com/GcJY7lt
+Consuilta em 25/12/2021
 
 --------------------------------------
 62 Iniciando Projeto
+CONCLUÍDO: 25/12/2021
+
+criar um novo projeto Dart: objeto
+ctrl+shift+p
+dart
+dart new project
+modelo: console application console-full
+nome: objeto
+
+Obs.: Manter as pastas e arquivos originais da instação inicial
 
 --------------------------------------
 63 Class
+CONCLUÍDO: 25/12/2021
+
+src/pessoa.dart
+class Pessoa {
+  String nome = "Edilson";
+  int idade = 55;
+  String sexo = "M";
+}
+
+bin/objeto.dart
+import 'package:objeto/src/pessoa.dart';
+
+void main(List<String> arguments) {
+  Pessoa pessoa = Pessoa();
+  print(pessoa.nome);
+  print(pessoa.idade);
+  print(pessoa.sexo);
+}
 
 --------------------------------------
 64 Método Construtor
+CONCLUÍDO: 25/12/2021
+
+Error: Field 'nome' should be initialized because its type 'String' doesn't allow null.
+Uma das soluções possíveis com o novo tratamento de null para as novas  versões do Dart:
+class Pessoa {
+  String? nome;
+  int? idade;
+  String? sexo;
+Fonte: https://stackoverflow.com/questions/67034475/non-nullable-instance-field-must-be-initialized
+Consulta em 25/12/2021
 
 --------------------------------------
 65 Parâmetros inteligentes
+CONCLUÍDO: 25/12/2021
+
+src/pessoa.dart
+Pessoa({String? nome, int? idade, String? sexo}) {
+    this.nome = nome;
+    this.idade = idade;
+    this.sexo = sexo;
+
+bin/objeto.dart
+void main(List<String> arguments) {
+  Pessoa pessoa = Pessoa(nome: "Edilson", idade: 55, sexo: "M");
+  print(pessoa.nome);
+  print(pessoa.idade);
+  print(pessoa.sexo);
+}
 
 --------------------------------------
-66 Construtores inteligentes
+66 Construtores inteligentes 25/12/2021	*** META
+CONCLUÍDO: 25/12/2021
+
+src/pessoa.dart
+class Pessoa {
+  String? nome;
+  int? idade;
+  String? sexo;
+
+  Pessoa({this.nome, this.idade, this.sexo});
+}
+
 
 --------------------------------------
 67 Protegendo variáveis
