@@ -493,25 +493,108 @@ class Pessoa {
 
 --------------------------------------
 67 Protegendo variáveis
+CONCLUÍDO: 26/12/2021
+
+src/pessoa.dart
+String  _nomeLocal = " ";
+-----------------
+src/pessoa.dart
+// variável que só pode ser instanciada uma vez
+  final String otherNome = "Vilarinho";
+
+bin/objeto.dart
+ // não permite uma segunda instância devido ao final String
+ pessoa.otherNome = "Carvalho";
+ Error: The setter 'otherNome' isn't defined for the class 'Pessoa'.
+ - 'Pessoa' is from 'package:objeto/src/pessoa.dart' ('../lib/src/pessoa.dart').
+Try correcting the name to the name of an existing setter, or defining a setter or field named 'otherNome'.
+  pessoa.otherNome = "Carvalho";
 
 --------------------------------------
 68 Herança
+CONCLUÍDO: 26/12/2021
+
+src/humano.dart
+class Humano {
+  int? peso;
+  double? altura;
+}
+
+src/pessoa.dart
+class Pessoa extends Humano
+
+bin/objeto.dart
+pessoa.peso = 90;
+pessoa.altura = 1.79;
+print(pessoa.peso);
+print(pessoa.altura);
+
 
 --------------------------------------
 69 Exercício com Herança
+CONCLUÍDO: 26/12/2021
+
+src/animal.dart
+class Animal {
+  String? barulho;
+  Animal({this.barulho});
+}
+
+src/gato.dart
+Gato({this.nome, barulho}) : super(barulho: barulho);
+
+bin/objeto
+Gato gato = Gato(nome: "Nininho", barulho: "mia");
+print("O gato ${gato.nome} ${gato.barulho}");
 
 --------------------------------------
 70 Exercício Final
+CONCLUÍDO: 26/12/2021
 
 --------------------------------------
 71 Criando Métodos
+CONCLUÍDO: 26/12/2021
+
+Incluir o "!" do lado direito das variáveis peso, altura e idade - Null Safety a partir do Dart 2.12
+src/pessoa.dart
+//calcular imc
+  double imc() {
+  double imc = peso! / (altura! * altura!);
+  return imc;
+  }
+
+//se é maior de idade
+bool maiorDeIdade() {
+    if (idade! >= 18) {
+    return true;
+  } else {
+    return false;
+ }
 
 --------------------------------------
 72 Arrow Function
+CONCLUÍDO: 26/12/2021
+
+src/pessoa.dart
+//calcular imc
+  double imc() => peso! / (altura! * altura!);
+
+  /*double imc() {
+    return peso! / (altura! * altura!);
+  }
+  */
+  
+  //se é maior de idade
+  bool maiorDeIdade() => idade! >= 18;
+
+  /*bool maiorDeIdade() {
+    return idade! >= 18;
+  }
+  */
 
 --------------------------------------
-73 Finalizando
-
+73 Finalizando  26/12/2021	*** META
+CONCLUÍDO: 26/12/2021
 
 *** FIM ***
 --------------------------------------
